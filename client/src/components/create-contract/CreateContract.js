@@ -97,7 +97,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.platform}
-                  info="Select Platform that you will use this content on"
+                  info="Which Platform will you use this content on"
                 />
                 <InputCheckboxGroup
                   placeholder="exclusive"
@@ -105,7 +105,7 @@ class CreateProfile extends Component {
                   value={this.state.exclusive}
                   onChange={this.onChange}
                   error={errors.exclusive}
-                  info="Select Exclusive that you will use this content on"
+                  info="Will the Buyer have Exclusive rights to this content?"
                 />
                 <InputCheckboxGroup
                   placeholder="credit"
@@ -113,7 +113,7 @@ class CreateProfile extends Component {
                   value={this.state.credit}
                   onChange={this.onChange}
                   error={errors.credit}
-                  info="Will you be giving the creator credit ('yes' or 'no')"
+                  info="Will the Creator receive credit in your posts? ('yes' or 'no')"
                 />
                 <TextFieldGroup
                   placeholder="Length of Usage"
@@ -121,7 +121,7 @@ class CreateProfile extends Component {
                   value={this.state.length_usage}
                   onChange={this.onChange}
                   error={errors.length_usage}
-                  info="How long does the Curator have the rights to is UGC"
+                  info="How long does the Buyer have the rights to this content?"
                 />
                 <TextFieldGroup
                   placeholder="Price"
@@ -145,7 +145,7 @@ class CreateProfile extends Component {
                   value={this.state.comments}
                   onChange={this.onChange}
                   error={errors.comments}
-                  info="Tell us a little about yourself"
+                  info="Any comments can be added here, this is where you can add non-monetary compensation as well."
                 />
                 <input
                   type="submit"

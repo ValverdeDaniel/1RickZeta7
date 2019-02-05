@@ -14,7 +14,7 @@ const InputCheckboxGroup = ({
   return (
     <div className="form-group">
       <input
-        className={classnames('form-control form-control-lg', {
+        className={classnames('form-control form-control-sm', {
           'is-invalid': error
         })}
         placeholder={placeholder}
