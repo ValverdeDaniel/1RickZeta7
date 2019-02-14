@@ -38,8 +38,8 @@ router.get(
   }
 );
 
-// @route   GET api/profile/all
-// @desc    Get all profiles
+// @route   GET api/contracts/all
+// @desc    Get all contracts
 // @access  Public
 router.get('/all', (req, res) => {
   const errors = {};
@@ -126,6 +126,33 @@ router.post(
       res.status(500).send(error)
     }
 
+  }
+);
+
+router.get('/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+  const errors = {};
+
+  Contract.findOne({ _id: req.params.id })
+  .then(contract => {
+    if(!contract) {
+      errors.nocontract = 'there is no contract for this user';
+      return res.status(404).json(errors);
+    }
+    res.json(contract);
+  })
+  .catch(err => res.status(404).json(err))
+});
+
+//attempt2 of getting contract info
+router.get(
+  '/1/:id',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    res.json({
+      id: req.contract.id,
+      name: req.contract.user,
+      email: req.contract.platform
+    });
   }
 );
 

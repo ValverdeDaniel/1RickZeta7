@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import './layout.css';
+
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -23,7 +25,7 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
+          <Link className="nav-link"  to="/dashboard">
             Dashboard
           </Link>
         </li>
@@ -88,6 +90,12 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/contGen">
                   {' '}
                   Contract Generator
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Contracts">
+                  {' '}
+                  Contracts
                 </Link>
               </li>
             </ul>
